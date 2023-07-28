@@ -1,0 +1,39 @@
+body, html {
+    height: 100%;
+    background: linear-gradient(45deg, #ED6B23, #CF9480, #7775A2, #2D2A70);
+    /* Mengatur ukuran dan posisi latar belakang */
+    background-size: 400% 400%;
+    background-position: center;
+    /* Animasi untuk memberikan efek blur */
+    animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 25% 25%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    75% {
+        background-position: 25% 25%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.card-body {
+    max-height: 500px; /* Atur tinggi maksimum untuk mengaktifkan scroll vertikal */
+    overflow-y: auto; /* Aktifkan scroll vertikal jika konten melebihi tinggi maksimum */
+}
